@@ -32,7 +32,6 @@ public class PopupValidationDefinition {
 	@When("^Diligencio formulario Popup Validation$")
 	public void diligencio_formulario_Popup_Validation(DataTable dtDatosForm) {
 	List<List<String>> data=dtDatosForm.raw();	
-	
 	for (int i=1; i<data.size(); i++) {
 		colorlibFormValidationSteps.diligenciar_popup_datos_tabla(data,i);
 	}
@@ -40,6 +39,7 @@ public class PopupValidationDefinition {
 
 	@Then("^Verifico Ingreso Exitoso$")
 	public void verifico_Ingreso_Exitoso() {
+		colorlibFormValidationSteps.VerificarExito();
 	}
 
 }
