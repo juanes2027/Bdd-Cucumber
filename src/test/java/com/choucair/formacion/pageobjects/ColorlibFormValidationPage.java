@@ -56,7 +56,8 @@ public class ColorlibFormValidationPage extends PageObject{
 			public WebElementFacade btnVal;
 		
 			//Globo informativo
-			@FindBy(xpath="//DIV[@class='formErrorContent'])[1]")
+			@FindBy(xpath="(//DIV[@class='formErrorContent'])[1]")	
+		//	@FindBy(xpath="//*[@id='popup-validation']/div[1]/div/div/div[1]")
 			public WebElementFacade globo;
 			
 			

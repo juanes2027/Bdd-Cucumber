@@ -34,12 +34,21 @@ public class PopupValidationDefinition {
 	List<List<String>> data=dtDatosForm.raw();	
 	for (int i=1; i<data.size(); i++) {
 		colorlibFormValidationSteps.diligenciar_popup_datos_tabla(data,i);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+	
+		}
 	}
 	}
 
 	@Then("^Verifico Ingreso Exitoso$")
 	public void verifico_Ingreso_Exitoso() {
 		colorlibFormValidationSteps.VerificarExito();
+			}
+	@Then("^Verifico que se presente globo informativo$")
+	public void verifico_que_se_presente_globo_informativo() {
+		colorlibFormValidationSteps.VerificarError();
 	}
 
 }
